@@ -1,4 +1,4 @@
-# Modern Login and Registration UI By using HTML & CSS
+# Modern Login and Registration UI Page using HTML & CSS
 
 ## Overview
 This is a modern, responsive login and registration user interface created using HTML and CSS. The design features a glassmorphism style with a customizable background image, providing a sleek and contemporary user experience.
