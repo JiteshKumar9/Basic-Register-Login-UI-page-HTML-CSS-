@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card login-card" id="login-card">
+            <div class="card-content">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required minlength="6">
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <div class="card-footer">
+                    <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card register-card" id="register-card">
+            <div class="card-content">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" name="register-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="register-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="register-password" placeholder="Create a password" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required minlength="6">
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+                <div class="card-footer">
+                    <p>Already have an Account? <a href="#" id="show-login">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('show-register').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('login-card').style.display = 'none';
+            document.getElementById('register-card').style.display = 'block';
+        });
+
+        document.getElementById('show-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('register-card').style.display = 'none';
+            document.getElementById('login-card').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
